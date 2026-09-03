@@ -19,7 +19,23 @@ const Nav = () => {
             {/* account section */}
             <div className='flex gap-4 justify-between items-center'>
                 <p className=''><i className="ri-contrast-2-fill  text-4xl"></i></p>
-                <p className='h-8 w-8 text-center rounded-full bg-violet-400 text-violet-800 font-bold text-2xl'>S</p>
+                <div className='relative group'>
+                    <p className='h-8 w-8 text-center rounded-full bg-violet-400 text-violet-800 font-bold text-2xl'>S</p>
+                     {/* opacity-0 
+                     invisible  for below container */}
+                {/* <div className="absolute 
+                right-0 
+                group-hover:opacity-100 
+                group-hover:visible 
+                h-40 
+                w-40 
+                bg-gray-100 
+                ">
+                    Profile Card
+                </div> */}
+                
+                </div>
+
             </div>
         </div>
     );

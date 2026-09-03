@@ -13,13 +13,30 @@ const MyUrls = () => {
     const [avgClicks, setAvgClicks] = useState(0);
     const [topLinks, setTopLinks] = useState([]);
     const { openModal } = useOutletContext();
+    const [deletingShortCode, setDeletingShortCode] = useState(null);
+    const [success, setSuccess] = useState("");
+    const [error, setError] = useState("");
 
-    const onDeleteHandler = async (ShortUrl) => {
-        const deleteResponse = await deleteShortUrl(ShortUrl);
-        console.log('deleted successfull...');
+    const onDeleteHandler = async (shortCode) => {
+        try {
 
-        const response = await getTopLinks();
-        setTopLinks(response.data);
+            setDeletingShortCode(shortCode);
+
+            await deleteShortUrl(shortCode);
+
+            setLinks(prevLinks =>
+                prevLinks.filter(link => link.shortCode !== shortCode)
+            );
+
+            setSuccess("URL deleted successfully");
+
+            console.log("deleted");
+
+        } catch (error) {
+            setError("Failed to delete URL");
+        } finally {
+            setDeletingShortCode(null);
+        }
     }
 
     useEffect(() => {

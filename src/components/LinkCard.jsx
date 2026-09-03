@@ -33,7 +33,7 @@ const LinkCard = (props) => {
                         className="cursor-pointer text-gray-600 hover:text-black"
                         onClick={() =>
                             navigator.clipboard.writeText(
-                                `http://localhost:8080/go/${props.data.shortCode}`
+                                `https://linkflow-1.onrender.com/go/${props.data.shortCode}`
                             )
                         }
                     >

@@ -42,7 +42,7 @@ function ShortUrlCard({
   handleCopy
 }) {
 
-  const shortUrl = `http://localhost:8080/go/${generatedUrl}`;
+  const shortUrl = `https://linkflow-1.onrender.com/go/${generatedUrl}`;
 
   return (
     <div className="border border-gray-300 rounded-lg p-4">

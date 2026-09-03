@@ -29,9 +29,9 @@ const AnalyticsTopBar = ({startDate, today, endDate, setStartDate, setEndDate}) 
                     />
                 </div>
 
-                <button className="border border-gray-300 rounded-lg p-2">
+                {/* <button className="border border-gray-300 rounded-lg p-2">
                     <i className="ri-download-2-line"></i> Export
-                </button>
+                </button> */}
             </div>
         </div>
     );

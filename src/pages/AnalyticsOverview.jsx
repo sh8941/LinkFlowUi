@@ -17,6 +17,7 @@ const AnalyticsOverview = () => {
     const [endDate, setEndDate] = useState(today);
     const [totalClicks, setTotalClicks] = useState(0);
     const [uniqueClicks, setUniqueClicks] = useState(0);
+    const [averageClicks, setAverageClicks] = useState(0);
     const [topLinks, setTopLinks] = useState([]);
 
     useEffect(
@@ -32,6 +33,7 @@ const AnalyticsOverview = () => {
                 console.log('fetched summaray between dates in analyticsoveriew');
                 setTotalClicks(data.totalClicks);
                 setUniqueClicks(data.uniqueClicks);
+                setAverageClicks(data.averageClicks);
 
                 const response2 = await getTopLinks();
                 const data2 = response2.data;
@@ -50,7 +52,7 @@ const AnalyticsOverview = () => {
             {/* top bar */}
             <AnalyticsTopBar today={today} startDate={startDate} endDate={endDate} setEndDate={setEndDate} setStartDate={setStartDate} />
             {/* overiew bar */}
-            <OverviewBar totalClicks={totalClicks} uniqueClicks={uniqueClicks}/>
+            <OverviewBar totalClicks={totalClicks} uniqueClicks={uniqueClicks} averageClicks={averageClicks}/>
             {/* clicks graph */}
             <ClickGraph startDate={startDate} endDate={endDate}/>
             {/* summary bar */}

@@ -34,7 +34,7 @@ function CreateUrlForm() {
     try {
 
       await navigator.clipboard.writeText(
-        'http://localhost:8080/go/' + generatedUrl
+        'https://linkflow-1.onrender.com/go/' + generatedUrl
       );
 
       setCopied(true);

@@ -37,7 +37,7 @@ const TopLinkCard = (props) => {
             </h4>
 
             <h4 className='text-center flex gap-4'>
-                <button className='cursor-pointer text-gray-600 ' onClick={() => {navigator.clipboard.writeText(`http://localhost:8080/go/${data.shortLink}`)}}><i className="ri-file-copy-line"></i></button>
+                <button className='cursor-pointer text-gray-600 ' onClick={() => {navigator.clipboard.writeText(`https://linkflow-1.onrender.com/go/${data.shortLink}`)}}><i className="ri-file-copy-line"></i></button>
                 <button className='cursor-pointer text-red-700' onClick={() => {props.onDeleteHandler(data.shortLink)}}><i className="ri-delete-bin-6-line"></i></button>
             </h4>
 

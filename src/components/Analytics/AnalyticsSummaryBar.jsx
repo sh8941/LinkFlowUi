@@ -23,9 +23,9 @@ const AnalyticsSummaryBar = ({topLinks}) => {
                 </div>
             </div>
 
-            <div className='w-1/2 border border-gray-300 rounded-lg'>
+            {/* <div className='w-1/2 border border-gray-300 rounded-lg'>
                 <CountryChart />
-            </div>
+            </div> */}
         </div>
     );
 }
