@@ -24,7 +24,7 @@ const TopLinkCard = (props) => {
                 {data.originalUrl}
             </h4>
 
-            <h4 className="truncate text-blue-700 cursor-pointer" onClick={() => navigator.clipboard.writeText(`http://localhost:8080/go/${data.shortLink}`)}>
+            <h4 className="truncate text-blue-700 cursor-pointer" onClick={() => navigator.clipboard.writeText(`https://linkflow-1.onrender.com/go/${data.shortLink}`)}>
                 {data.shortLink}
             </h4>
 

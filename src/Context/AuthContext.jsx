@@ -11,7 +11,7 @@ export const AuthProvider = ({ children }) => {
     const checkAuth = async () => {
         try {
             const response = await axios.get(
-                "http://localhost:8080/user/me",
+                "https://linkflow-1.onrender.com/user/me",
                 { withCredentials: true }
             );
 

@@ -118,7 +118,7 @@ const LinksPage = () => {
                                 </td>
 
                                 <td className="px-4 py-3 flex gap-4 text-xl">
-                                    <button className="text-gray-400 rounded cursor-pointer" onClick={() => { navigator.clipboard.writeText("http://localhost:8080/go/" + link.shortCode);}}>
+                                    <button className="text-gray-400 rounded cursor-pointer" onClick={() => { navigator.clipboard.writeText("https://linkflow-1.onrender.com/go/" + link.shortCode);}}>
                                         <i className="ri-file-copy-line"></i>
                                     </button>
                                     <button className="text-red-700 rounded cursor-pointer" onClick={() => { deleteHandler(link.shortCode)}}
